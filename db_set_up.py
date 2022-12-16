@@ -11,7 +11,7 @@ conn = sqlite3.connect(database = "covid.db")
 cursor = conn.cursor()
 
 #Doping EMPLOYEE table if already exists
-cursor.execute("DROP TABLE covidCases")
+cursor.execute("DROP TABLE IF EXISTS covidCases")
 print("Table dropped... ")
 
 # create a table
