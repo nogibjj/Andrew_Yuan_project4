@@ -6,7 +6,7 @@ COPY . db_set_up.py /app/
 COPY . covid_19_cases.csv /app/
 COPY . requirements.txt /app/
 WORKDIR /app
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 EXPOSE 8080
 RUN python3 db_set_up.py
-# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
