@@ -1,5 +1,4 @@
 import sqlite3
-import click
 
 
 # three options to choose
@@ -27,21 +26,6 @@ cmd3 = """
 """
 
 
-@click.command()
-@click.option(
-    "--choice",
-    "-c",
-    default=1,
-    required = True,
-    type = int,
-    help = "Choices to do with the db"
-)
-@click.option(
-    "--name",
-    "-n",
-    default = "China",
-    help = "Select which country to return" 
-)
 def main(choice,name):
     conn = sqlite3.connect("covid.db")
     cursor = conn.cursor()
