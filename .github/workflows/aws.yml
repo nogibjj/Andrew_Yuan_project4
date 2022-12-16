@@ -12,9 +12,6 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Format code
-      run: |
-        make format
     - name: Configure AWS credentails
       uses: aws-actions/configure-aws-credentials@v1
       with:
